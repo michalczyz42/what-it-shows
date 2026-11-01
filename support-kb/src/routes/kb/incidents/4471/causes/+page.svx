@@ -25,18 +25,21 @@ For day-first tenant locales, the shared parser still reads month first. This ca
 across app, email, and form reports. The desk also flagged one-day-move reports; classified by
 tenant locale, they remain in this group.
 
-Track the parser fix in [GitHub issue #2](https://github.com/michalczyz42/what-it-shows/issues/2).
+The desk update on 5 October says engineering fixed the parser with
+`fix(dates): parse dd/mm for eu locales`. [GitHub issue #2](https://github.com/michalczyz42/what-it-shows/issues/2)
+is closed as completed.
 
 ## Booking-v3 hint conflicts with tenant locale
 
 Booking-v3 displays `MM/DD/YYYY`, but these tenants use day-first locales. People follow the
 hint while the form interprets the date in the tenant's order, producing a separate mismatch.
 
-Track the form hint and parsing fix in [GitHub issue #1](https://github.com/michalczyz42/what-it-shows/issues/1).
+The desk marked this won't fix because the booking-v3 form was retired. [GitHub issue #1](https://github.com/michalczyz42/what-it-shows/issues/1)
+is closed as not planned.
 
 <Callout kind="warn">
-Do not merge these groups by subject or intake tag alone. Resolve the cause using the tenant's
-locale and booking form, and count each report ID once.
+Ticket #4471 is closed, but the two causes had different outcomes: the parser was fixed, while
+the booking-v3 hint was not fixed because that form was retired. Count each report ID once.
 </Callout>
 
 <RenderStamp {signature} />

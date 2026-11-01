@@ -59,13 +59,13 @@
 
         <h2>Shared parser reads month first</h2>
         <p>For day-first tenant locales, the shared parser still reads month first. This cause appears across app, email, and form reports. The desk also flagged one-day-move reports; classified by tenant locale, they remain in this group.</p>
-        <p>Track the parser fix in <a href="https://github.com/michalczyz42/what-it-shows/issues/2">GitHub issue #2</a>.</p>
+        <p>The desk update on 5 October says engineering fixed the parser with <code>fix(dates): parse dd/mm for eu locales</code>. <a href="https://github.com/michalczyz42/what-it-shows/issues/2">GitHub issue #2</a> is closed as completed.</p>
 
         <h2>Booking-v3 hint conflicts with tenant locale</h2>
         <p>Booking-v3 displays <code>MM/DD/YYYY</code>, but these tenants use day-first locales. People follow the hint while the form interprets the date in the tenant's order, producing a separate mismatch.</p>
-        <p>Track the form hint and parsing fix in <a href="https://github.com/michalczyz42/what-it-shows/issues/1">GitHub issue #1</a>.</p>
+        <p>The desk marked this won't fix because the booking-v3 form was retired. <a href="https://github.com/michalczyz42/what-it-shows/issues/1">GitHub issue #1</a> is closed as not planned.</p>
 
-        <aside class="warn">Do not merge these groups by subject or intake tag alone. Resolve the cause using the tenant's locale and booking form, and count each report ID once.</aside>
+        <aside class="warn">Ticket #4471 is closed, but the two causes had different outcomes: the parser was fixed, while the booking-v3 hint was not fixed because that form was retired. Count each report ID once.</aside>
         <p class="stamp">desk ref <b>DR-8QFX-CGCD</b></p>
       </main>
       <footer>Pages are written by people. Tables and charts are built from data at render time.</footer>
